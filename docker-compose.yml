@@ -1,0 +1,18 @@
+version: '2'
+services:
+  logstash:
+    image: lschoonaert/cimsoncore:latest
+    container_name: logstash
+    ports:
+     - 5044:5044
+    restart: unless-stopped
+    volumes:
+    - /opt/threathunt/logstash/pipeline/:/usr/share/logstash/pipeline/
+    - /opt/threathunt/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+    networks:
+      - elastic
+
+networks:
+  elastic:
+    driver: bridge
+
