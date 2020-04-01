@@ -1,2 +1,2 @@
 # logstash
-logstash configuration with REST API plugin
+logstash configuration with rest/tld API plugins
