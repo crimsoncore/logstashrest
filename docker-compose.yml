@@ -1,8 +1,8 @@
 version: '2'
 services:
   logstash:
-    image: lschoonaert/cimsoncore:latest
-    container_name: logstash
+    image: crimsoncorelabs/logstashrest
+    container_name: logstashrest
     ports:
      - 5044:5044
     restart: unless-stopped
